@@ -260,15 +260,10 @@
   const mapPanel = document.getElementById('officeMapPanel');
 
   const mapSources = {
-    geneva: {
-      embed: 'https://maps.google.com/maps?q=Rue%20du%20Rh%C3%B4ne%20114%2C%201204%20Geneva%2C%20Switzerland&output=embed',
-      link: 'https://maps.google.com/?q=Rue%20du%20Rh%C3%B4ne%20114%2C%201204%20Geneva%2C%20Switzerland',
-      title: 'Map of the GEA Geneva head office'
-    },
-    singapore: {
-      embed: 'https://maps.google.com/maps?q=One%20Raffles%20Quay%2C%20North%20Tower%2C%20Singapore%20048583&output=embed',
-      link: 'https://maps.google.com/?q=One%20Raffles%20Quay%2C%20North%20Tower%2C%20Singapore%20048583',
-      title: 'Map of the GEA Singapore regional office'
+    cortaillod: {
+      embed: 'https://maps.google.com/maps?q=Chemin%20du%20Vivier%206%2C%20CH-2016%20Cortaillod%2C%20Switzerland&output=embed',
+      link: 'https://maps.google.com/?q=Chemin%20du%20Vivier%206%2C%20CH-2016%20Cortaillod%2C%20Switzerland',
+      title: 'Map of the GEA Head Office in Cortaillod, Switzerland'
     }
   };
 
@@ -370,7 +365,7 @@
       const okEl = document.getElementById('contactFormOk');
       const status = document.getElementById('contactFormStatus');
       if (draft && okEl && status) {
-        draft.href = `mailto:info@gea-ethanol.org?subject=${encodeURIComponent(form.subject.selectedOptions[0].text)}&body=${encodeURIComponent(details)}`;
+        draft.href = `mailto:admin@globalethanol.org?subject=${encodeURIComponent(form.subject.selectedOptions[0].text)}&body=${encodeURIComponent(details)}`;
         status.textContent = 'Your email draft is ready. Open your email app to review and send it.';
         okEl.classList.add('show');
       }
