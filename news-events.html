@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Ethanol Association | Stronger Together. Cleaner Future.</title>
+<meta name="description" content="The Global Ethanol Association brings together the global ethanol industry to advance renewable fuels, innovation and collaboration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- =============== HEADER =============== -->
+<header class="header" id="header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Global Ethanol Association home">
+      <img src="assets/gea-logo-header.png" alt="Global Ethanol Association" width="190" height="46">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About GEA</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html#board">Boards</a></li>
+        <li><a href="news-events.html" class="active">News &amp; Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-orbit sm" href="contact.html#join" id="joinGEABtn">Join GEA <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+      <a class="btn-member" href="#memberspace" id="memberSpaceBtn"><i data-lucide="lock"></i> Member Space</a>
+      <button class="icon-btn menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a class="link" href="index.html">Home <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="about.html">About GEA <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="services.html">Services <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="about.html#board">Boards <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="news-events.html">News &amp; Events <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="contact.html">Contact Us <i data-lucide="arrow-right"></i></a>
+    <div class="mobile-menu-btns">
+      <a class="btn btn-primary btn-orbit lg" href="contact.html#join">Join GEA <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+      <a class="btn-member" href="#memberspace"><i data-lucide="lock"></i> Member Space</a>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="main">
+
+<!-- =========================================================
+     NEWS & EVENTS — HERO
+     ========================================================= -->
+<section class="news-hero">
+  <div class="news-hero-bg">
+    <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1600&q=80" alt="News & Events">
+  </div>
+  <div class="news-hero-overlay"></div>
+  <div class="container news-hero-inner">
+    <span class="eyebrow rise"><i data-lucide="newspaper"></i>News & Events</span>
+    <h1 class="rise delay-1">Latest from the <em>Ethanol World</em></h1>
+    <p class="lead rise delay-2">Stay informed with industry insights, association updates, event announcements, and thought leadership from the global ethanol community.</p>
+
+    <!-- Search Bar -->
+    <div class="news-search-bar rise delay-3">
+      <div class="news-search-input-wrap">
+        <i data-lucide="search"></i>
+        <input type="text" id="newsSearch" placeholder="Search articles, events, topics..." aria-label="Search news and events">
+        <button class="news-search-clear" id="newsSearchClear" aria-label="Clear search" style="display:none;">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="news-search-filters">
+        <select id="newsCategoryFilter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="industry-news">Industry News</option>
+          <option value="association-updates">Association Updates</option>
+          <option value="events">Events</option>
+          <option value="thought-leadership">Thought Leadership</option>
+          <option value="policy-regulation">Policy & Regulation</option>
+        </select>
+        <select id="newsSortFilter" aria-label="Sort articles">
+          <option value="latest">Latest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="title-az">Title A–Z</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Popular Tags -->
+    <div class="news-tags-bar rise delay-4">
+      <span class="news-tags-label"><i data-lucide="tags"></i>Popular:</span>
+      <div class="news-tags-list">
+        <button class="news-tag" data-tag="marine-fuel">Marine Fuel</button>
+        <button class="news-tag" data-tag="decarbonisation">Decarbonisation</button>
+        <button class="news-tag" data-tag="sustainability">Sustainability</button>
+        <button class="news-tag" data-tag="partnerships">Partnerships</button>
+        <button class="news-tag" data-tag="innovation">Innovation</button>
+        <button class="news-tag" data-tag="policy">Policy</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEATURED ARTICLE
+     ========================================================= -->
+<section class="section bg-1" style="padding-top:clamp(48px,6vw,80px);">
+  <div class="container">
+    <div class="featured-article reveal" id="featuredArticle">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     NEWS GRID
+     ========================================================= -->
+<section class="section bg-0" style="padding-top:0;">
+  <div class="container">
+    <div class="news-grid-header reveal">
+      <h2>All <em>Articles & Events</em></h2>
+      <span class="news-count" id="newsCount">Showing 5 articles</span>
+    </div>
+
+    <div class="news-grid" id="newsGrid">
+      <!-- Dynamically populated -->
+    </div>
+
+    <!-- No Results -->
+    <div class="news-no-results" id="newsNoResults" style="display:none;">
+      <div class="nnr-icon"><i data-lucide="search-x"></i></div>
+      <h3>No Results Found</h3>
+      <p>Try adjusting your search terms or filters to find what you're looking for.</p>
+      <button class="btn btn-primary" id="newsResetFilters">
+        Reset All Filters
+        <span class="ico"><i data-lucide="rotate-ccw"></i></span>
+      </button>
+    </div>
+
+    <!-- Load More -->
+    <div class="news-load-more-wrap" id="newsLoadMoreWrap">
+      <button class="btn btn-glass" id="newsLoadMore">
+        Load More Articles
+        <span class="ico"><i data-lucide="chevron-down"></i></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     NEWSLETTER CTA
+     ========================================================= -->
+<section class="section bg-2" style="padding-top:0;">
+  <div class="container">
+    <div class="newsletter-cta reveal">
+      <div class="nc-left">
+        <div class="nc-icon"><i data-lucide="mail-open"></i></div>
+        <div>
+          <h3>Never Miss an Update</h3>
+          <p>Subscribe to our newsletter for the latest news, event invitations, and industry insights delivered to your inbox.</p>
+        </div>
+      </div>
+      <form class="nc-form" id="newsletterForm">
+        <div class="field" style="margin:0;flex:1;">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address" aria-label="Email for newsletter">
+          <span class="err">Please enter a valid email</span>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          Subscribe
+          <span class="ico"><i data-lucide="arrow-right"></i></span>
+        </button>
+      </form>
+      <div class="form-ok" id="newsletterOk">
+        <i data-lucide="check-circle-2"></i>
+        <span>Thank you for subscribing!</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- =============== FOOTER =============== -->
+ <div>
+   <div class="footer-cta">
+    <div><h3>Stay Connected</h3><p>Subscribe for the latest updates, insights and events.</p></div>
+    <form class="news" id="newsForm" novalidate>
+      <div class="field"><label class="sr-only" for="nl">Email address</label><input id="nl" type="email" placeholder="Enter your email address" autocomplete="email" required><span class="err" id="e-nl">Enter a valid email address.</span></div>
+      <button class="btn btn-primary btn-orbit" type="submit">Subscribe</button>
+    </form>
+  </div>
+<footer class="footer" id="footer">
+  
+  <img class="bgimg" id="footerBg" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy">
+ 
+
+  <div class="container footer-main">
+    <div>
+      <a class="logo" href="#top"><img src="assets/gea-logo.png" alt="Global Ethanol Association"></a>
+      <p>The global voice of the ethanol industry, driving innovation, sustainability and collaboration for a better tomorrow.</p>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="X / Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+      </div>
+    </div>
+    <div><h4>Association</h4><ul><li><a href="#about">About GEA</a></li><li><a href="#vision">Vision &amp; Mission</a></li><li><a href="#board">Board of Directors</a></li><li><a href="#join">Membership</a></li></ul></div>
+    <div><h4>Explore</h4><ul><li><a href="#sectors">Sector Initiatives</a></li><li><a href="#groups">Working Groups</a></li><li><a href="#clients">Our Clients</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>Washington, D.C., USA</li><li><a href="mailto:info@example.org">info@example.org</a></li><li><a href="tel:+10000000000">+1 (000) 000-0000</a></li></ul></div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> Global Ethanol Association. All rights reserved.</span>
+    <nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></nav>
+  </div>
+</footer>
+
+ </div>
+
+<button class="icon-btn to-top" id="toTop" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>

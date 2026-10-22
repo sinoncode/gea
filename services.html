@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Ethanol Association | Stronger Together. Cleaner Future.</title>
+<meta name="description" content="The Global Ethanol Association brings together the global ethanol industry to advance renewable fuels, innovation and collaboration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<!-- =============== HEADER =============== -->
+<header class="header" id="header">
+  <div class="bar">
+    <a class="logo" href="index.html" aria-label="Global Ethanol Association home">
+      <img src="assets/gea-logo-header.png" alt="Global Ethanol Association" width="190" height="46">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About GEA</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="about.html#board">Boards</a></li>
+        <li><a href="news-events.html">News &amp; Events</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a class="btn btn-primary btn-orbit sm" href="contact.html#join" id="joinGEABtn">Join GEA <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+      <a class="btn-member" href="#memberspace" id="memberSpaceBtn"><i data-lucide="lock"></i> Member Space</a>
+      <button class="icon-btn menu-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-menu-inner">
+    <a class="link" href="index.html">Home <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="about.html">About GEA <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="services.html">Services <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="about.html#board">Boards <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="news-events.html">News &amp; Events <i data-lucide="arrow-right"></i></a>
+    <a class="link" href="contact.html">Contact Us <i data-lucide="arrow-right"></i></a>
+    <div class="mobile-menu-btns">
+      <a class="btn btn-primary btn-orbit lg" href="contact.html#join">Join GEA <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+      <a class="btn-member" href="#memberspace"><i data-lucide="lock"></i> Member Space</a>
+    </div>
+  </div>
+</div>
+
+<main id="main" class="main">
+  <!-- =====================================================
+     SERVICES PAGE: MIDDLE CONTENT ONLY
+     Paste between your existing header and footer (inside <main id="main">).
+     Needs: style_1.css + main_1.js (yours) + services-extra.css + services-extra.js
+     The modal itself is built by services-extra.js, so no modal HTML is needed here.
+     ===================================================== -->
+
+<!-- 1. HERO -->
+<section class="page-hero svc-hero" id="services-top">
+  <div class="container svc-hero-grid">
+    <div>
+      <nav class="breadcrumb rise" style="--i:0" aria-label="Breadcrumb">
+        <a href="index.html"><i data-lucide="home"></i> Home</a>
+        <span class="breadcrumb-sep"><i data-lucide="chevron-right"></i></span>
+        <span class="breadcrumb-current" aria-current="page">Services</span>
+      </nav>
+      <span class="eyebrow rise" style="--i:1"><i data-lucide="briefcase"></i> Our Services</span>
+      <h1 class="svc-title rise" style="--i:2">Practical services that turn <em>demand into delivery</em></h1>
+      <p class="svc-lead rise" style="--i:3">From market development to project structuring, GEA supports members and partners at every stage of bringing sustainable fuel solutions to market.</p>
+      <div class="hero-cta rise" style="--i:4">
+        <a href="#services" class="btn btn-primary btn-orbit lg">Explore Services <span class="ico"><i data-lucide="arrow-down"></i></span></a>
+        <a href="contact.html" class="btn btn-glass lg">Talk to Our Team <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+      </div>
+    </div>
+
+    <aside class="svc-glance rise" style="--i:5" aria-label="Services at a glance">
+      <div class="svc-glance-row"><span class="ic"><i data-lucide="layers"></i></span><div><strong>5 core services</strong><span>Each one built around a clear outcome</span></div></div>
+      <div class="svc-glance-row"><span class="ic"><i data-lucide="route"></i></span><div><strong>Concept to delivery</strong><span>Support across the full project journey</span></div></div>
+      <div class="svc-glance-row"><span class="ic"><i data-lucide="network"></i></span><div><strong>Whole value chain</strong><span>Producers, shipping, finance and technology</span></div></div>
+    </aside>
+  </div>
+</section>
+
+<!-- 2. SERVICES GRID (each card opens its modal) -->
+<section class="section bg-0" id="services">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><i data-lucide="sparkles"></i> What We Offer</span>
+      <h2>Five services, <em>one connected approach</em></h2>
+      <p>Select any service to see what is included, how it works and who it is for.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc-card reveal" data-service="market" style="--d:0">
+        <div class="svc-card-media"><img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="svc-num">01</span></div>
+        <div class="svc-card-body">
+          <span class="svc-badge"><i data-lucide="trending-up"></i></span>
+          <h3>Market Development &amp; Advocacy</h3>
+          <p>Build awareness, confidence and demand for sustainable fuels across the value chain.</p>
+          <button class="svc-open" type="button" aria-haspopup="dialog">View details <span class="go"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </article>
+
+      <article class="svc-card reveal" data-service="supply" style="--d:1">
+        <div class="svc-card-media"><img src="https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="svc-num">02</span></div>
+        <div class="svc-card-body">
+          <span class="svc-badge"><i data-lucide="fuel"></i></span>
+          <h3>Fuel Supply Chain Development</h3>
+          <p>Design the production, logistics and bunkering links that make reliable supply possible.</p>
+          <button class="svc-open" type="button" aria-haspopup="dialog">View details <span class="go"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </article>
+
+      <article class="svc-card reveal" data-service="projects" style="--d:2">
+        <div class="svc-card-media"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="" loading="lazy"><span class="svc-num">03</span></div>
+        <div class="svc-card-body">
+          <span class="svc-badge"><i data-lucide="git-branch"></i></span>
+          <h3>Project Origination &amp; Structuring</h3>
+          <p>Turn complex opportunities into commercially viable, execution-ready projects.</p>
+          <button class="svc-open" type="button" aria-haspopup="dialog">View details <span class="go"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </article>
+
+      <article class="svc-card wide reveal" data-service="partnerships" style="--d:0">
+        <div class="svc-card-media"><img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy"><span class="svc-num">04</span></div>
+        <div class="svc-card-body">
+          <span class="svc-badge"><i data-lucide="handshake"></i></span>
+          <h3>Strategic Partnerships &amp; Matchmaking</h3>
+          <p>Connect investors, industrial companies, technology providers and fuel buyers with the right counterparts.</p>
+          <button class="svc-open" type="button" aria-haspopup="dialog">View details <span class="go"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </article>
+
+      <article class="svc-card wide reveal" data-service="advisory" style="--d:1">
+        <div class="svc-card-media"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1100&q=80" alt="" loading="lazy"><span class="svc-num">05</span></div>
+        <div class="svc-card-body">
+          <span class="svc-badge"><i data-lucide="flask-conical"></i></span>
+          <h3>Research, Standards &amp; Technical Advisory</h3>
+          <p>Evidence, technical guidance and shared standards to support confident decisions.</p>
+          <button class="svc-open" type="button" aria-haspopup="dialog">View details <span class="go"><i data-lucide="arrow-up-right"></i></span></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 3. HOW WE WORK -->
+<section class="section bg-2" id="how-we-work">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><i data-lucide="workflow"></i> How We Work</span>
+      <h2>A clear path from <em>first conversation to results</em></h2>
+      <p>The same simple framework sits behind every service.</p>
+    </div>
+    <ol class="svc-flow reveal">
+      <span class="svc-flow-line" aria-hidden="true"><span></span></span>
+      <li><span class="n">1</span><h3>Listen</h3><p>We start with your goals, constraints and the market context.</p></li>
+      <li><span class="n">2</span><h3>Design</h3><p>We shape a practical plan with clear scope, roles and milestones.</p></li>
+      <li><span class="n">3</span><h3>Connect</h3><p>We bring in the right partners from across the value chain.</p></li>
+      <li><span class="n">4</span><h3>Deliver</h3><p>We support execution and review progress with you along the way.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 4. WHO WE SERVE -->
+<section class="section bg-1" id="who-we-serve">
+  <div class="container svc-serve">
+    <div class="reveal">
+      <span class="eyebrow"><i data-lucide="users"></i> Who We Serve</span>
+      <div class="section-head" style="margin:18px 0 0">
+        <h2>Built for the people <em>moving the industry</em></h2>
+        <p>Our services support organisations at different points of the sustainable fuel value chain.</p>
+      </div>
+      <a href="contact.html" class="btn btn-glass" style="margin-top:28px">Find the right service <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+    </div>
+    <div class="svc-audience reveal" style="--d:1">
+      <div class="svc-aud"><i data-lucide="ship"></i><strong>Shipowners &amp; operators</strong><span>Plan fuel pathways with confidence.</span></div>
+      <div class="svc-aud"><i data-lucide="factory"></i><strong>Fuel producers</strong><span>Reach new markets and buyers.</span></div>
+      <div class="svc-aud"><i data-lucide="cpu"></i><strong>Technology providers</strong><span>Find partners and pilot projects.</span></div>
+      <div class="svc-aud"><i data-lucide="landmark"></i><strong>Investors &amp; lenders</strong><span>Assess structured opportunities.</span></div>
+      <div class="svc-aud"><i data-lucide="anchor"></i><strong>Ports &amp; terminals</strong><span>Prepare supply infrastructure.</span></div>
+      <div class="svc-aud"><i data-lucide="scale"></i><strong>Policy &amp; regulators</strong><span>Access evidence and industry input.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. WHY CHOOSE US (reuses existing .why styles) -->
+<section class="section why" id="why-choose">
+  <img class="bgimg" src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow"><i data-lucide="sparkles"></i> Why Choose Us</span>
+      <h2 class="why-title">Why organisations work with <em>GEA</em></h2>
+      <p>Experience, a practical mindset and a network built around delivery.</p>
+    </div>
+    <div class="why-grid">
+      <article class="perk reveal"><i data-lucide="anchor"></i><h3>Industry Experience</h3><p>Leadership drawn from international shipping, finance and energy.</p></article>
+      <article class="perk reveal" style="--d:1"><i data-lucide="network"></i><h3>Connected Network</h3><p>Access to partners across the entire value chain.</p></article>
+      <article class="perk reveal" style="--d:2"><i data-lucide="check-check"></i><h3>Execution Focus</h3><p>Plans that are commercially sound and ready to deliver.</p></article>
+      <article class="perk reveal"><i data-lucide="shield-check"></i><h3>Trusted Approach</h3><p>Transparent, aligned and built on long-term relationships.</p></article>
+      <article class="perk reveal" style="--d:1"><i data-lucide="puzzle"></i><h3>Tailored Support</h3><p>Every engagement is shaped around your specific goals.</p></article>
+      <article class="perk reveal" style="--d:2"><i data-lucide="leaf"></i><h3>Sustainability Driven</h3><p>Focused on practical routes to lower-emission fuels.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. FAQ -->
+<section class="section bg-0" id="services-faq">
+  <div class="container svc-faq-wrap">
+    <div class="section-head reveal" style="margin-bottom:0">
+      <span class="eyebrow"><i data-lucide="help-circle"></i> FAQ</span>
+      <h2>Questions about <em>our services</em></h2>
+      <p>Can't find what you need? Our team is happy to help.</p>
+      <a href="contact.html" class="btn btn-primary btn-orbit" style="margin-top:26px">Contact Us <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+    </div>
+    <div class="svc-faq reveal" style="--d:1">
+      <details open><summary>Who can use GEA services? <i data-lucide="plus"></i></summary><p>Services are designed for members and partners across the value chain. Contact us to discuss eligibility for your organisation.</p></details>
+      <details><summary>Can services be combined? <i data-lucide="plus"></i></summary><p>Yes. Many engagements combine several services, for example supply chain development together with partnership matchmaking.</p></details>
+      <details><summary>How long does an engagement take? <i data-lucide="plus"></i></summary><p>It depends on scope. Each service page lists a typical timeframe, and we confirm a plan after an initial conversation.</p></details>
+      <details><summary>How do we get started? <i data-lucide="plus"></i></summary><p>Open any service, choose “Request this service”, and our team will get in touch to understand your goals.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- 7. CTA (reuses existing .about-cta styles) -->
+<section class="about-cta-section">
+  <div class="container">
+    <div class="about-cta reveal">
+      <h2>Ready to turn demand into delivery?</h2>
+      <p>Tell us what you are working on and we will help you find the right service and the right partners.</p>
+      <div class="about-cta-actions">
+        <a href="contact.html" class="btn btn-light btn-orbit on-dark lg">Request a Consultation <span class="ico"><i data-lucide="arrow-right"></i></span></a>
+        <a href="#services" class="btn btn-glass about-cta-secondary lg">Review Services <span class="ico"><i data-lucide="arrow-up"></i></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+  </main>
+
+<!-- =============== FOOTER =============== -->
+ <div>
+   <div class="footer-cta">
+    <div><h3>Stay Connected</h3><p>Subscribe for the latest updates, insights and events.</p></div>
+    <form class="news" id="newsForm" novalidate>
+      <div class="field"><label class="sr-only" for="nl">Email address</label><input id="nl" type="email" placeholder="Enter your email address" autocomplete="email" required><span class="err" id="e-nl">Enter a valid email address.</span></div>
+      <button class="btn btn-primary btn-orbit" type="submit">Subscribe</button>
+    </form>
+  </div>
+<footer class="footer" id="footer">
+  
+  <img class="bgimg" id="footerBg" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=80" alt="" loading="lazy">
+ 
+
+  <div class="container footer-main">
+    <div>
+      <a class="logo" href="#top"><img src="assets/gea-logo.png" alt="Global Ethanol Association"></a>
+      <p>The global voice of the ethanol industry, driving innovation, sustainability and collaboration for a better tomorrow.</p>
+      <div class="social">
+        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="#" aria-label="X / Twitter"><i data-lucide="twitter"></i></a>
+        <a href="#" aria-label="YouTube"><i data-lucide="youtube"></i></a>
+      </div>
+    </div>
+    <div><h4>Association</h4><ul><li><a href="#about">About GEA</a></li><li><a href="#vision">Vision &amp; Mission</a></li><li><a href="#board">Board of Directors</a></li><li><a href="#join">Membership</a></li></ul></div>
+    <div><h4>Explore</h4><ul><li><a href="#sectors">Sector Initiatives</a></li><li><a href="#groups">Working Groups</a></li><li><a href="#clients">Our Clients</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+    <div><h4>Contact</h4><ul><li>Washington, D.C., USA</li><li><a href="mailto:info@example.org">info@example.org</a></li><li><a href="tel:+10000000000">+1 (000) 000-0000</a></li></ul></div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© <span id="year">2026</span> Global Ethanol Association. All rights reserved.</span>
+    <nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></nav>
+  </div>
+</footer>
+
+ </div>
+
+<button class="icon-btn to-top" id="toTop" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
