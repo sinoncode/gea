@@ -1350,7 +1350,7 @@ p {
 
 .member .ph img {
   width: 100%;
-  height: 100%;
+  height: 330px;
   object-fit: cover;
   object-position: center top;
   transition: transform 700ms var(--ease-emphasized)
@@ -2186,6 +2186,11 @@ p {
 .member {
   position: relative;
   overflow: hidden;
+  height: 200px;
+  /* margin: anchor-size; */
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
 
 .member::after {
@@ -2224,6 +2229,118 @@ p {
 
 .member:hover .info::before {
   transform: scaleX(1);
+}
+
+.cofounders-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 12% 18%, rgba(22, 163, 74, .08), transparent 34%),
+    linear-gradient(180deg, var(--bg1), var(--bg0));
+}
+
+.cofounders-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(20px, 3vw, 36px);
+  width: min(100%, 980px);
+  margin-inline: auto;
+}
+
+.cofounder-card {
+  display: grid;
+  grid-template-columns: minmax(150px, .78fr) minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--bg1);
+  box-shadow: 0 16px 44px rgba(12, 26, 14, .08);
+  transition: transform var(--motion-normal) var(--ease-standard),
+    box-shadow var(--motion-normal), border-color var(--motion-normal);
+}
+
+.cofounder-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-hover);
+  box-shadow: 0 22px 54px rgba(12, 26, 14, .14);
+}
+
+.cofounder-portrait {
+  min-height: 260px;
+  overflow: hidden;
+  background: var(--bg3);
+}
+
+.cofounder-portrait img {
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  object-fit: cover;
+  object-position: center 24%;
+  transition: transform 700ms var(--ease-emphasized);
+}
+
+.cofounder-card:hover .cofounder-portrait img {
+  transform: scale(1.04);
+}
+
+.cofounder-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(22px, 3vw, 36px);
+}
+
+.cofounder-info h3 {
+  font-size: clamp(1.25rem, 2vw, 1.65rem);
+  line-height: 1.2;
+}
+
+.cofounder-info .role {
+  margin-top: 12px;
+  color: var(--accent-hi);
+  font-size: .95rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.cofounder-info .org {
+  margin-top: 6px;
+  color: var(--t3);
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .cofounders-grid {
+    width: min(100%, 560px);
+    grid-template-columns: 1fr;
+  }
+
+  .cofounder-card {
+    grid-template-columns: minmax(140px, .72fr) minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cofounder-card {
+    grid-template-columns: 1fr;
+  }
+
+  .cofounder-portrait {
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+
+  .cofounder-portrait img {
+    min-height: 0;
+    object-position: center 28%;
+  }
+
+  .cofounder-info {
+    padding: 22px;
+  }
 }
 
 /* =========================================================
