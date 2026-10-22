@@ -2175,3 +2175,131 @@ const NEWS_ARTICLES = [
   const m = location.hash.match(/^#svc-(\w+)$/);
   if (m) setTimeout(() => open(m[1], null), 400);
 })();
+
+
+/* =========================================================
+   GEA SECTOR INITIATIVES
+   Interactive animations and smooth navigation
+========================================================= */
+
+(function () {
+  'use strict';
+
+  function initGEAInitiatives() {
+    const sections = document.querySelectorAll('.gea-initiatives');
+
+    if (!sections.length) return;
+
+    const reducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches;
+
+    /* Initialize Lucide icons without replacing other JS functionality. */
+
+    function renderGEAIcons() {
+      if (
+        window.lucide &&
+        typeof window.lucide.createIcons === 'function'
+      ) {
+        window.lucide.createIcons();
+      }
+    }
+
+    renderGEAIcons();
+
+    /* Scroll reveal animations */
+
+    sections.forEach(section => {
+      const revealElements = section.querySelectorAll('.gea-reveal');
+
+      if (reducedMotion || !('IntersectionObserver' in window)) {
+        revealElements.forEach(element => {
+          element.classList.add('gea-revealed');
+        });
+
+        return;
+      }
+
+      section.classList.add('gea-motion-ready');
+
+      const revealObserver = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add('gea-revealed');
+
+            revealObserver.unobserve(entry.target);
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        }
+      );
+
+      revealElements.forEach(element => {
+        revealObserver.observe(element);
+      });
+    });
+
+    /* Smooth scrolling for links inside the initiative sections */
+
+    document
+      .querySelectorAll('.gea-initiatives a[href^="#"]')
+      .forEach(link => {
+        link.addEventListener('click', event => {
+          const href = link.getAttribute('href');
+
+          if (!href || href === '#') return;
+
+          const target = document.querySelector(href);
+
+          if (!target) return;
+
+          event.preventDefault();
+
+          target.scrollIntoView({
+            behavior: reducedMotion ? 'auto' : 'smooth',
+            block: 'start'
+          });
+
+          if (history.replaceState) {
+            history.replaceState(null, '', href);
+          }
+        });
+      });
+
+    /* Subtle pointer effect for desktop pillar cards */
+
+    const supportsFinePointer = window.matchMedia(
+      '(hover: hover) and (pointer: fine)'
+    ).matches;
+
+    if (supportsFinePointer && !reducedMotion) {
+      sections.forEach(section => {
+        section.querySelectorAll('.gea-pillar').forEach(card => {
+          card.addEventListener('pointermove', event => {
+            const rect = card.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            card.style.setProperty('--gea-pointer-x', `${x}px`);
+            card.style.setProperty('--gea-pointer-y', `${y}px`);
+          });
+        });
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener(
+      'DOMContentLoaded',
+      initGEAInitiatives,
+      { once: true }
+    );
+  } else {
+    initGEAInitiatives();
+  }
+})();
