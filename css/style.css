@@ -2312,6 +2312,34 @@ p {
   line-height: 1.5;
 }
 
+.cofounder-info .linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  width: 40px;
+  height: 40px;
+  color: #274eff;
+  background: #a9c7ff;
+  border-radius: 50%;
+  transition: transform 450ms var(--ease-emphasized),
+    color var(--motion-normal) var(--ease-standard),
+    background-color var(--motion-normal) var(--ease-standard),
+    box-shadow var(--motion-normal) var(--ease-standard);
+}
+
+.cofounder-info .linkedin:hover,
+.cofounder-info .linkedin:focus-visible {
+  transform: translateY(-3px) scale(1.06);
+  color: #fff;
+  background: #274eff;
+  box-shadow: 0 8px 18px rgba(39, 78, 255, .25);
+}
+
+.cofounder-info .linkedin:active {
+  transform: translateY(-1px) scale(.97);
+}
+
 @media (max-width: 760px) {
   .cofounders-grid {
     width: min(100%, 560px);
